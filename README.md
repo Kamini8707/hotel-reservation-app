@@ -56,21 +56,30 @@ hotel-reservation-app/
 
 
 
-⚡ Installation & Setup
-1. Clone Repo
+## ⚡ Installation & Setup
+
+### 1. Clone Repo
+```bash
 git clone https://github.com/<your-username>/hotel-reservation-app.git
 cd hotel-reservation-app
+```
 
-2. Run Backend
+### 2. Run Backend
+```bash
 cd backend
 npm install
 npm run dev
+```
 # Backend runs on http://localhost:4000
 
-3. Run Frontend
+### 3. Run Frontend
+```bash
 cd ../frontend
 npm install
+````
 # Create .env file with backend URL
+```bash
 echo VITE_API_URL=http://localhost:4000 > .env
 npm run dev
+```
 # Open http://localhost:5173
