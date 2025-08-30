@@ -74,7 +74,7 @@ npm run dev
 # Open http://localhost:5173
 ```
 
-🌐### Live Demo & Links
+# 🌐 Live Demo & Links
 
 Live Demo (Frontend): https://hotel-reservation-ap.netlify.app/
 
@@ -82,7 +82,7 @@ API Backend: https://hotel-reservation-app-g067.onrender.com/
 
 Source Code: https://github.com/Kamini8707/hotel-reservation-app
 
-###📖 Project Description
+# 📖 Project Description
 
 Hotel Room Reservation System 🏨
 A full-stack web application for optimized hotel room booking with 97 rooms across 10 floors. It applies smart allocation rules to minimize guest travel time and supports booking up to 5 rooms per guest.
@@ -92,3 +92,20 @@ Frontend: React + Vite (deployed on Netlify)
 Backend: Node.js + Express (deployed on Render)
 
 Features: Smart room allocation, travel time calculation, booking visualization, reset & randomize occupancy.
+
+# 🚀 Future Improvements
+
+Add database support (MongoDB / PostgreSQL)
+
+User authentication (sign-in & booking history)
+
+Admin dashboard for managing rooms
+
+# 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+Feel free to fork this repo and submit a PR.
+
+# 📜 License
+
+This project is licensed under the MIT License.
