@@ -62,25 +62,24 @@ hotel-reservation-app/
 ```bash
 git clone https://github.com/<your-username>/hotel-reservation-app.git
 cd hotel-reservation-app
-
 2. Run Backend
+bash
+Copy code
 cd backend
 npm install
 npm run dev
 # Backend runs on http://localhost:4000
-
 3. Run Frontend
+bash
+Copy code
 cd ../frontend
 npm install
 # Create .env file with backend URL
 echo VITE_API_URL=http://localhost:4000 > .env
 npm run dev
 # Open http://localhost:5173
-
 🌐 Deployment
-
-Backend → Deploy on Render
- or Railway
+Backend → Deploy on Render or Railway
 
 Root dir: backend
 
@@ -88,8 +87,7 @@ Build: npm install
 
 Start: node server.js
 
-Frontend → Deploy on Netlify
- or Vercel
+Frontend → Deploy on Netlify or Vercel
 
 Root dir: frontend
 
@@ -99,10 +97,10 @@ Publish dir: dist
 
 Environment Variable:
 
+ini
+Copy code
 VITE_API_URL=https://your-backend.onrender.com
-
 📌 API Endpoints
-
 GET /state → Get current occupancy + last booking
 
 POST /book { count: 1..5 } → Allocate rooms optimally
@@ -112,12 +110,14 @@ POST /reset → Reset all bookings
 POST /randomize { occupancyRatio?: 0..1 } → Randomize room occupancy
 
 🎯 Example Booking Rule
-
 If 4 rooms are requested:
 
 Case 1: Available on one floor → assign those (minimize span).
 
 Case 2: Not available on one floor → system finds rooms across floors with minimum travel time.
+
+👩‍💻 Author
+Developed by Kamini Prajapati ✨
 
 👩‍💻 Author
 
