@@ -36,15 +36,17 @@ A full-stack web application built as part of the **SDE-3 Assessment**, implemen
 
 ## 📂 Project Structure
 
+```text
 hotel-reservation-app/
 │
-├── backend/ # Node.js + Express API
-│ ├── server.js # Backend logic
-│ └── package.json
+├── backend/              # Node.js + Express API
+│   ├── server.js         # Backend logic
+│   └── package.json
 │
-├── frontend/ # React + Vite app
-│ ├── src/ # Components & styles
-│ └── package.json
+├── frontend/             # React + Vite app
+│   ├── src/              # Components & styles
+│   └── package.json
 │
 └── README.md
+
 
