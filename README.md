@@ -52,6 +52,9 @@ hotel-reservation-app/
 
 
 ---
+```
+
+
 
 ## ⚡ Installation & Setup
 
@@ -59,7 +62,6 @@ hotel-reservation-app/
 ```bash
 git clone https://github.com/<your-username>/hotel-reservation-app.git
 cd hotel-reservation-app
-```
 
 2. Run Backend
 cd backend
