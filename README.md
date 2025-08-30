@@ -1,46 +1,50 @@
-# Hotel Room Reservation System (Full Stack)
+# 🏨 Hotel Room Reservation System
 
-A complete solution for the SDE-3 assessment.
+A full-stack web application built as part of the **SDE-3 Assessment**, implementing an optimized hotel room booking system with rules for travel time and room allocation.
 
-## Tech
-- Frontend: Vite + React
-- Backend: Node + Express (in-memory state)
-- CORS enabled. Configure API URL via `VITE_API_URL` in frontend.
+---
 
-## Run locally
+## 🚀 Features
 
-### Backend
-```bash
-cd backend
-npm install
-npm run dev
-# listens on http://localhost:4000
-```
+- **97 rooms** across 10 floors  
+  - Floors 1–9 → 10 rooms each  
+  - Floor 10 → 7 rooms  
+- **Smart Booking Rules**  
+  - Up to **5 rooms per guest**  
+  - Priority:  
+    1. Same floor (minimize horizontal distance)  
+    2. Multi-floor allocation (minimize combined travel time)  
+- **Travel Time Calculation**  
+  - Horizontal: `1 minute` per adjacent room  
+  - Vertical: `2 minutes` per floor  
+- **Visualization** of rooms (Available / Booked / Last Selected)  
+- **Controls**  
+  - Book rooms  
+  - Randomize occupancy  
+  - Reset system  
 
-### Frontend
-```bash
-cd frontend
-npm install
-# Point to backend (optional if using localhost:4000)
-# echo VITE_API_URL=http://localhost:4000 > .env
-npm run dev
-# open the printed URL (default http://localhost:5173)
-```
+---
 
-## Deploy (quick)
-- **Backend**: Deploy to Render/Fly/Railway. Start command: `node server.js`.
-- **Frontend**: Deploy to Netlify/Vercel. Set env `VITE_API_URL` to your backend URL.
+## 🛠 Tech Stack
 
-## API
-- `GET /state` → returns current occupancy and last booking
-- `POST /book` body: `{ "count": 1..5 }`
-- `POST /reset` → clears all bookings
-- `POST /randomize` body: `{ "occupancyRatio": 0..1 }` (default 0.35)
+- **Frontend** → React + Vite + CSS (Netlify/Vercel deployable)  
+- **Backend** → Node.js + Express (Render/Railway deployable)  
+- **State** → In-memory (can extend to DB like MongoDB/Postgres)  
+- **API** → REST (CORS enabled)  
 
-## Allocation Logic (tl;dr)
-1. Try to allocate all rooms on **one floor** minimizing horizontal span (`maxPos - minPos`).
-2. If not possible, precompute on each floor the best **window** for sizes `1..k`.
-3. DFS over floors to choose at most **one window per floor** whose sizes sum to `k`.
-4. Travel time for a multi-floor selection is computed between the effective **first** and **last** rooms via the left stair:  
-   `min( (p1-1) + 2*|f1-f2| + (p2-1), reverse )`.
-5. Tie-breakers: lower travel time, fewer floors used, smaller farthest position, lower min floor.
+---
+
+## 📂 Project Structure
+
+hotel-reservation-app/
+│
+├── backend/ # Node.js + Express API
+│ ├── server.js # Backend logic
+│ └── package.json
+│
+├── frontend/ # React + Vite app
+│ ├── src/ # Components & styles
+│ └── package.json
+│
+└── README.md
+
