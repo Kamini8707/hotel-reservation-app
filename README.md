@@ -1,6 +1,6 @@
 # 🏨 Hotel Room Reservation System
 
-A full-stack web application built as part of the **SDE-3 Assessment**, implementing an optimized hotel room booking system with smart rules for travel time and room allocation.
+A full-stack web application built by implementing an optimized hotel room booking system with smart rules for travel time and room allocation.
 
 ---
 
